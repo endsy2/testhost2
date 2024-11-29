@@ -2,7 +2,7 @@ $(document).ready(function () {
     // Function to fetch data from the server and display it
     function fetchData() {
         $.ajax({
-            url: "http://localhost:3000/get", // Adjust this URL to match your API endpoint
+            url: "https://testhost123.onrender.com/get", // Adjust this URL to match your API endpoint
             type: "GET",
             success: function (response) {
                 console.log(response);
@@ -35,7 +35,7 @@ $(document).ready(function () {
     $("#clear").click(function () {
         // Optionally, you can make an AJAX call to delete all data if required
         $.ajax({
-            url: "http://localhost:3000/delete",
+            url: "https://testhost123.onrender.com/delete",
             type: "DELETE",
             success: function (response) {
                 console.log("All data deleted successfully:", response);
@@ -61,7 +61,7 @@ $(document).ready(function () {
         console.log(value);
 
         $.ajax({
-            url: "http://localhost:3000/post", // Adjust this URL to match your API endpoint
+            url: "https://testhost123.onrender.com/post", // Adjust this URL to match your API endpoint
             type: "POST",
             data: JSON.stringify(value),
             contentType: "application/json",
